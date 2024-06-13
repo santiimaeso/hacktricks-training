@@ -23,5 +23,5 @@ jobs:
           aws-region: eu-west-1
           role-to-assume: arn:aws:iam::160342630676:role/sts-lab-2-target
 
-      - run: aws sts get-caller-identity
+      - run: aws secretsmanager get-secrets-value --secret-id arn:aws:secretsmanager:us-east-1:160342630676:secret:flag_sts_lab_2-B7o1t1
         shell: bash
